@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>کیمیاگران فردا | دکتر ساجده سیدنژاد</title>
+<style>
+:root{
+  --bg1:#0a0e27; --bg2:#1a1f4e; --glass:rgba(255,255,255,0.08); --glass-border:rgba(255,255,255,0.18);
+  --neon:#00f0ff; --neon2:#ff00e5; --gold:#ffd700; --green:#00ff88; --red:#ff3366;
+  --text:#e8f4ff; --muted:#9bb0d0; --card:rgba(20,30,60,0.55);
+}
+[data-theme="fire"]{--neon:#ff6a00;--neon2:#ff0044;--bg1:#1a0505;--bg2:#3d0a0a;}
+[data-theme="green"]{--neon:#00ff88;--neon2:#00d4ff;--bg1:#051a10;--bg2:#0a3d25;}
+[data-theme="light"]{--bg1:#e8f0ff;--bg2:#c8d8ff;--glass:rgba(255,255,255,0.6);--glass-border:rgba(100,150,255,0.3);--text:#0a1a3a;--muted:#456;--card:rgba(255,255,255,0.75);}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+body{font-family:'Vazirmatn','Tahoma',sans-serif;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--text);min-height:100vh;transition:background .5s;}
+#particles{position:fixed;inset:0;z-index:0;pointer-events:none;}
+.app{position:relative;z-index:1;min-height:100vh;padding:12px;max-width:1200px;margin:0 auto;}
+.glass{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--glass-border);border-radius:18px;box-shadow:0 8px 32px rgba(0,0,0,0.3);}
+.btn{background:linear-gradient(135deg,var(--neon),var(--neon2));color:#001;border:none;padding:12px 20px;border-radius:14px;font-family:inherit;font-weight:bold;font-size:15px;cursor:pointer;transition:all .2s;box-shadow:0 4px 15px rgba(0,240,255,.3);}
+.btn:hover{transform:translateY(-2px);}
+.btn:active{transform:scale(.97);}
+.btn.ghost{background:transparent;border:2px solid var(--neon);color:var(--neon);box-shadow:none;}
+.btn.gold{background:linear-gradient(135deg,#ffd700,#ff9500);color:#331;}
+.btn.sm{padding:8px 14px;font-size:13px;border-radius:10px;}
+.hidden{display:none!important;}
+h1,h2,h3{font-weight:800;}
+.screen{animation:fadeIn .4s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;margin-bottom:12px;gap:8px;flex-wrap:wrap;position:relative;}
+.logo{font-size:18px;font-weight:900;background:linear-gradient(135deg,var(--neon),var(--neon2));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.top-actions{display:flex;gap:6px;flex-wrap:wrap;}
+.icon-btn{width:40px;height:40px;border-radius:12px;background:var(--glass);border:1px solid var(--glass-border);color:var(--text);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s;}
+.icon-btn:hover{background:var(--neon);color:#001;}
+
+.login-card{max-width:460px;margin:4vh auto;padding:28px;text-align:center;position:relative;}
+.login-card h1{font-size:22px;margin-bottom:6px;background:linear-gradient(135deg,var(--neon),var(--neon2));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.login-card p.sub{color:var(--muted);font-size:13px;margin-bottom:16px;}
+
+/* === کادر لوگو === */
+.login-logo-box{
+  position:absolute; top:12px; right:12px;
+  width:110px; height:110px; border-radius:14px; overflow:hidden;
+  background:rgba(0,0,0,.4); border:2px solid var(--gold);
+  box-shadow:0 0 18px rgba(255,215,0,.4);
+  display:flex; align-items:center; justify-content:center;
+  z-index:10;
+  cursor:pointer;
+  transition:.2s;
+}
+.login-logo-box:hover{transform:scale(1.05);border-color:var(--neon);}
+.login-logo-box img{width:100%;height:100%;object-fit:cover;display:block;}
+.login-logo-box .placeholder{
+  color:var(--gold);font-size:11px;text-align:center;padding:6px;line-height:1.5;font-weight:bold;
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+}
+.login-logo-box .placeholder span:first-child{font-size:24px;}
+.login-logo-box .hint{
+  position:absolute;bottom:0;left:0;right:0;
+  background:rgba(0,0,0,.7);color:#fff;font-size:8px;
+  padding:2px 0;text-align:center;
+}
+
+.prepared-by{
+  margin-top:16px; padding:10px 14px;
+  background:rgba(0,240,255,.1);
+  border-right:3px solid var(--neon);
+  border-radius:12px;
+  font-size:12px; line-height:1.8; text-align:right;
+}
+.prepared-by b{color:var(--gold);}
+@media(max-width:520px){
+  .login-logo-box{width:80px;height:80px;top:8px;right:8px;}
+  .login-card{padding-top:100px;}
+}
+
+.field{margin-bottom:14px;text-align:right;}
+.field label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px;font-weight:bold;}
+.field input{width:100%;padding:12px 14px;border-radius:12px;background:rgba(0,0,0,.25);border:1px solid var(--glass-border);color:var(--text);font-family:inherit;font-size:15px;outline:none;transition:.2s;}
+.field input:focus{border-color:var(--neon);box-shadow:0 0 0 3px rgba(0,240,255,.15);}
+[data-theme="light"] .field input{background:rgba(255,255,255,.85);color:#0a1a3a;}
+.mode-select{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0;}
+.mode-card{padding:16px 10px;border-radius:14px;background:var(--card);border:2px solid transparent;cursor:pointer;transition:.2s;text-align:center;}
+.mode-card.active{border-color:var(--neon);box-shadow:0 0 20px rgba(0,240,255,.3);}
+.mode-card .em{font-size:26px;display:block;margin-bottom:6px;}
+.mode-card small{color:var(--muted);font-size:11px;}
+
+.hud{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:12px;margin-bottom:12px;text-align:center;}
+.hud-item small{display:block;font-size:10px;color:var(--muted);margin-bottom:2px;}
+.hud-item b{font-size:17px;color:var(--neon);}
+.timer-wrap{grid-column:1/-1;margin-top:4px;}
+.timer-bar{height:10px;border-radius:6px;background:rgba(0,0,0,.3);overflow:hidden;}
+.timer-fill{height:100%;width:100%;background:linear-gradient(90deg,var(--green),var(--gold),var(--red));transition:width 1s linear;border-radius:6px;}
+
+.quiz-grid{display:grid;grid-template-columns:1fr;gap:12px;}
+@media(min-width:800px){.quiz-grid{grid-template-columns:1.3fr 1fr;}}
+.q-card{padding:18px;position:relative;}
+.q-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:6px;}
+.q-badge{font-size:11px;padding:4px 10px;border-radius:20px;background:rgba(0,240,255,.15);color:var(--neon);border:1px solid rgba(0,240,255,.3);}
+.q-text{font-size:16px;font-weight:700;line-height:1.7;margin-bottom:16px;}
+.q-image{margin:10px 0 16px;border-radius:12px;border:1px solid var(--glass-border);min-height:50px;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.2);font-size:12px;color:var(--muted);padding:10px;text-align:center;}
+.options{display:flex;flex-direction:column;gap:9px;}
+.opt{padding:13px 16px;border-radius:13px;background:var(--card);border:2px solid var(--glass-border);cursor:pointer;transition:.2s;font-size:15px;display:flex;align-items:center;gap:10px;}
+.opt:hover:not(.disabled){border-color:var(--neon);transform:translateX(-3px);}
+.opt .key{width:26px;height:26px;border-radius:8px;background:rgba(0,240,255,.15);color:var(--neon);display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:13px;flex-shrink:0;}
+.opt.correct{background:rgba(0,255,136,.2);border-color:var(--green);}
+.opt.wrong{background:rgba(255,51,102,.2);border-color:var(--red);}
+.opt.disabled{cursor:not-allowed;opacity:.55;}
+.opt.eliminated{opacity:.25;text-decoration:line-through;}
+
+.reaction-panel{padding:14px;display:flex;flex-direction:column;}
+.reaction-panel h3{font-size:13px;color:var(--muted);margin-bottom:8px;text-align:center;}
+#reactionCanvas{width:100%;border-radius:12px;background:rgba(0,0,0,.3);border:1px solid var(--glass-border);}
+.lifelines{display:flex;gap:8px;margin-top:12px;justify-content:center;flex-wrap:wrap;}
+.lifeline{flex:1;min-width:70px;padding:10px 6px;border-radius:12px;background:var(--card);border:2px solid var(--glass-border);cursor:pointer;transition:.2s;text-align:center;font-size:11px;}
+.lifeline:hover:not(.used){border-color:var(--gold);transform:translateY(-2px);}
+.lifeline.used{opacity:.3;cursor:not-allowed;}
+.lifeline .em{font-size:20px;display:block;}
+
+.feedback{margin-top:12px;padding:14px;border-radius:13px;font-size:13px;line-height:1.7;display:none;}
+.feedback.show{display:block;animation:fadeIn .3s;}
+.feedback.ok{background:rgba(0,255,136,.12);border:1px solid var(--green);}
+.feedback.no{background:rgba(255,51,102,.12);border:1px solid var(--red);}
+.feedback b{color:var(--neon);}
+
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(6px);z-index:100;display:flex;align-items:center;justify-content:center;padding:16px;animation:fadeIn .25s;}
+.modal{max-width:560px;width:100%;max-height:90vh;overflow-y:auto;padding:22px;position:relative;}
+.modal h2{font-size:18px;margin-bottom:14px;color:var(--neon);}
+.close-x{position:absolute;top:12px;left:12px;width:34px;height:34px;border-radius:10px;background:rgba(255,51,102,.2);border:1px solid var(--red);color:var(--red);font-size:18px;cursor:pointer;z-index:5;}
+
+.ptable-wrap{overflow-x:auto;padding:6px 0;direction:ltr;}
+.periodic{display:grid;grid-template-columns:repeat(18,minmax(38px,1fr));gap:3px;min-width:700px;direction:ltr;}
+.periodic .el{aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:5px;background:rgba(0,240,255,.1);border:1px solid rgba(0,240,255,.25);cursor:pointer;transition:.15s;color:var(--text);padding:1px;position:relative;}
+.periodic .el:hover{background:var(--neon);color:#001;transform:scale(1.25);z-index:3;box-shadow:0 0 12px var(--neon);}
+.periodic .el .num{font-size:7px;opacity:.8;line-height:1;position:absolute;top:2px;left:3px;}
+.periodic .el .sym{font-size:12px;font-weight:900;line-height:1.1;font-family:'Arial',sans-serif;}
+.periodic .el .nm{font-size:6.5px;opacity:.85;line-height:1;font-family:'Vazirmatn',Tahoma,sans-serif;}
+.periodic .el.empty{background:transparent;border:none;pointer-events:none;}
+.periodic .el.g1{background:rgba(255,100,100,.3);}
+.periodic .el.g2{background:rgba(255,160,80,.3);}
+.periodic .el.g13{background:rgba(120,200,255,.25);}
+.periodic .el.g14{background:rgba(150,220,180,.25);}
+.periodic .el.g15{background:rgba(140,255,150,.25);}
+.periodic .el.g16{background:rgba(200,255,120,.25);}
+.periodic .el.g17{background:rgba(80,220,255,.3);}
+.periodic .el.g18{background:rgba(255,215,0,.35);}
+.periodic .el.g3to12{background:rgba(160,150,255,.25);}
+.el-info{margin-top:14px;padding:14px;border-radius:12px;background:rgba(0,240,255,.1);border:1px solid var(--neon);display:none;direction:rtl;}
+.el-info.show{display:block;}
+.el-info h3{color:var(--neon);font-size:18px;margin-bottom:6px;}
+.el-info p{font-size:13px;line-height:1.8;margin:3px 0;}
+.el-info b{color:var(--gold);}
+
+.calc-display{background:rgba(0,0,0,.4);border-radius:12px;padding:14px;text-align:left;font-size:22px;font-family:monospace;margin-bottom:10px;min-height:52px;direction:ltr;overflow-x:auto;color:var(--neon);}
+.calc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
+.calc-grid button{padding:14px 4px;border-radius:10px;background:var(--card);border:1px solid var(--glass-border);color:var(--text);font-size:16px;font-family:inherit;cursor:pointer;transition:.15s;}
+.calc-grid button:hover{background:var(--neon);color:#001;}
+.calc-grid button.op{background:rgba(0,240,255,.15);color:var(--neon);}
+.calc-grid button.eq{background:var(--gold);color:#331;font-weight:bold;}
+.formula-list{display:flex;flex-direction:column;gap:8px;font-size:13px;}
+.formula-list div{padding:10px;border-radius:10px;background:rgba(0,240,255,.08);border-right:3px solid var(--neon);line-height:1.7;}
+.tool-tabs{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap;}
+.tool-tabs button{flex:1;padding:10px;border-radius:10px;background:var(--card);border:1px solid var(--glass-border);color:var(--text);font-family:inherit;cursor:pointer;font-size:12px;min-width:90px;}
+.tool-tabs button.active{background:var(--neon);color:#001;font-weight:bold;}
+
+.result-card{max-width:600px;margin:0 auto;padding:24px;text-align:center;}
+.score-big{font-size:52px;font-weight:900;background:linear-gradient(135deg,var(--gold),var(--neon));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1;}
+.radar-wrap{display:flex;justify-content:center;margin:16px 0;}
+#radarCanvas{max-width:280px;width:100%;}
+.badge-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:8px;margin:14px 0;}
+.badge{padding:12px 6px;border-radius:12px;background:var(--card);border:2px solid var(--glass-border);text-align:center;font-size:10px;opacity:.35;transition:.3s;}
+.badge.earned{opacity:1;border-color:var(--gold);box-shadow:0 0 18px rgba(255,215,0,.4);}
+.badge .em{font-size:24px;display:block;margin-bottom:4px;}
+#certCanvas{max-width:100%;border-radius:12px;border:2px solid var(--gold);display:block;margin:0 auto;}
+
+.t-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:10px;}
+.t-table th,.t-table td{padding:8px 6px;border-bottom:1px solid var(--glass-border);text-align:right;}
+.t-table th{color:var(--neon);font-size:11px;}
+
+.toast{position:fixed;top:20px;left:50%;transform:translateX(-50%);padding:12px 22px;border-radius:14px;background:linear-gradient(135deg,var(--neon),var(--neon2));color:#001;font-weight:bold;z-index:200;box-shadow:0 8px 30px rgba(0,240,255,.5);animation:slideDown .4s;}
+@keyframes slideDown{from{opacity:0;transform:translate(-50%,-30px);}to{opacity:1;transform:translate(-50%,0);}}
+
+.battle-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.battle-side{padding:12px;border-radius:14px;}
+.battle-side.active{border:2px solid var(--neon);box-shadow:0 0 20px rgba(0,240,255,.3);}
+.battle-side h4{text-align:center;font-size:14px;margin-bottom:8px;color:var(--neon);}
+.battle-opts{display:flex;flex-direction:column;gap:6px;}
+.battle-opts button{padding:10px;border-radius:10px;background:var(--card);border:1px solid var(--glass-border);color:var(--text);font-family:inherit;font-size:13px;cursor:pointer;}
+.battle-opts button:hover{background:var(--neon);color:#001;}
+
+.audio-pod{display:flex;align-items:center;gap:10px;padding:10px;border-radius:12px;background:rgba(0,240,255,.08);margin-top:10px;flex-wrap:wrap;}
+.eq{display:flex;gap:2px;align-items:flex-end;height:22px;}
+.eq span{width:3px;background:var(--neon);border-radius:2px;animation:eq 0.8s infinite ease-in-out;height:4px;}
+@keyframes eq{0%,100%{height:4px;}50%{height:22px;}}
+.audio-pod.playing .eq span{animation-play-state:running;}
+.audio-pod:not(.playing) .eq span{animation-play-state:paused;height:4px;}
+.eq span:nth-child(2){animation-delay:.15s}.eq span:nth-child(3){animation-delay:.3s}.eq span:nth-child(4){animation-delay:.45s}.eq span:nth-child(5){animation-delay:.6s}
+.help-text{font-size:11px;color:var(--muted);margin-top:6px;line-height:1.7;}
+.progress-dots{display:flex;gap:6px;justify-content:center;margin:10px 0;}
+.progress-dots i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.2);}
+.progress-dots i.done{background:var(--green);}
+.progress-dots i.cur{background:var(--neon);box-shadow:0 0 8px var(--neon);}
+.legend{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:10px;direction:rtl;}
+.legend span{padding:3px 8px;border-radius:6px;color:#001;font-weight:bold;}
+::-webkit-scrollbar{width:6px;height:6px;}::-webkit-scrollbar-thumb{background:var(--neon);border-radius:3px;}
+</style>
+</head>
+<body>
+<canvas id="particles"></canvas>
+<div class="app">
+
+<!-- LOGIN -->
+<div id="screen-login" class="screen">
+  <div class="topbar glass">
+    <div class="logo">⚗️ کیمیاگران فردا</div>
+    <div class="top-actions">
+      <button class="icon-btn" onclick="cycleTheme()" title="تم">🎨</button>
+      <button class="icon-btn" onclick="openTeacher()" title="پنل معلم">🔐</button>
+    </div>
+  </div>
+  <div class="login-card glass">
+    <!-- کادر لوگو با قابلیت آپلود -->
+    <div class="login-logo-box" id="logo-box" onclick="pickLogo()" title="برای انتخاب لوگو کلیک کنید">
+      <div class="placeholder" id="logo-placeholder">
+        <span>🏫</span>
+        <span>برمدار آموزش</span>
+      </div>
+      <div class="hint" id="logo-hint">📷 کلیک کنید</div>
+      <input type="file" accept="image/*" id="logo-input" hidden onchange="loadLogo(event)">
+    </div>
+
+    <h1>سوپر اپلیکیشن کیمیاگران فردا</h1>
+    <p class="sub">جدول تناوبی • دوره و گروه • آرایش الکترونی</p>
+    <div class="field"><label>نام و نام خانوادگی</label><input id="in-name" placeholder="مثلاً: علی محمدی"></div>
+    <div class="field"><label>نام مدرسه</label><input id="in-school" placeholder="مثلاً: دبیرستان شهید بهشتی"></div>
+    <div class="mode-select">
+      <div class="mode-card active" data-mode="solo" onclick="setMode(this,'solo')"><span class="em">🧪</span>تک‌نفره<small>حالت شخصی</small></div>
+      <div class="mode-card" data-mode="battle" onclick="setMode(this,'battle')"><span class="em">⚔️</span>دو نفره<small>پای تخته</small></div>
+    </div>
+    <button class="btn" style="width:100%" onclick="startGame()">🚀 شروع آزمایشگاه</button>
+    <button class="btn ghost" style="width:100%;margin-top:8px" onclick="openPeriodic()">🧬 مشاهده جدول تناوبی</button>
+    <button class="btn ghost" style="width:100%;margin-top:8px" onclick="openTeacher()">🔐 ورود معلم</button>
+    <p class="help-text">۶ سوال در مورد دوره، گروه، آرایش الکترونی و لایه ظرفیت.</p>
+    <div class="prepared-by">
+      <div>🎓 تهیه‌کننده: <b>دکتر ساجده سیدنژاد</b></div>
+      <div>🏫 سرگروه شیمی استان مازندران</div>
+    </div>
+  </div>
+</div>
+
+<!-- GAME -->
+<div id="screen-game" class="screen hidden">
+  <div class="topbar glass">
+    <div class="logo">⚗️ کیمیاگران</div>
+    <div class="top-actions">
+      <button class="icon-btn" onclick="openToolbox()" title="جعبه ابزار">🧰</button>
+      <button class="icon-btn" onclick="openPeriodic()" title="جدول تناوبی">🧬</button>
+      <button class="icon-btn" onclick="cycleTheme()" title="تم">🎨</button>
+      <button class="icon-btn" onclick="emergencyExit()" title="خروج">🚪</button>
+    </div>
+  </div>
+
+  <div class="hud glass">
+    <div class="hud-item"><small>سوال</small><b id="hud-q">1/6</b></div>
+    <div class="hud-item"><small>امتیاز</small><b id="hud-score">0</b></div>
+    <div class="hud-item"><small>زمان</small><b id="hud-time">30</b></div>
+    <div class="hud-item"><small>رقیب</small><b id="hud-opp">—</b></div>
+    <div class="timer-wrap"><div class="timer-bar"><div class="timer-fill" id="timer-fill"></div></div></div>
+  </div>
+
+  <div class="progress-dots" id="progress-dots"></div>
+
+  <div id="solo-view" class="quiz-grid">
+    <div class="q-card glass">
+      <div class="q-meta">
+        <span class="q-badge" id="q-topic">موضوع</span>
+        <button class="btn ghost sm" onclick="openTextbook()">📖 صفحه کتاب</button>
+      </div>
+      <div class="q-text" id="q-text"></div>
+      <div class="q-image" id="q-image"></div>
+      <div class="options" id="options"></div>
+      <div class="feedback" id="feedback"></div>
+      <div class="lifelines">
+        <div class="lifeline" id="ll-50" onclick="useFifty()"><span class="em">✂️</span>۵۰:۵۰</div>
+        <div class="lifeline" id="ll-time" onclick="useTime()"><span class="em">⏱️</span>+۱۵ ثانیه</div>
+        <div class="lifeline" id="ll-help" onclick="useHelp()"><span class="em">🧑‍🔬</span>مشورت</div>
+      </div>
+      <div class="audio-pod" id="audio-pod">
+        <div class="eq"><span></span><span></span><span></span><span></span><span></span></div>
+        <button class="btn sm ghost" onclick="toggleReadAloud()">🔊 روخوانی فارسی</button>
+      </div>
+    </div>
+    <div class="reaction-panel glass">
+      <h3>🔬 نمایش اتم</h3>
+      <canvas id="reactionCanvas" width="400" height="320"></canvas>
+      <div class="help-text" id="reaction-caption" style="text-align:center">—</div>
+    </div>
+  </div>
+
+  <div id="battle-view" class="hidden">
+    <div class="q-card glass" style="margin-bottom:10px">
+      <div class="q-text" id="b-text"></div>
+    </div>
+    <div class="battle-grid">
+      <div class="battle-side glass active" id="side-a">
+        <h4>🅰️ رقیب الف</h4>
+        <div class="battle-opts" id="b-opts-a"></div>
+      </div>
+      <div class="battle-side glass" id="side-b">
+        <h4>🅱️ رقیب ب</h4>
+        <div class="battle-opts" id="b-opts-b"></div>
+      </div>
+    </div>
+    <div class="feedback" id="b-feedback" style="margin-top:10px"></div>
+  </div>
+</div>
+
+<!-- RESULT -->
+<div id="screen-result" class="screen hidden">
+  <div class="topbar glass">
+    <div class="logo">🏆 کارنامه</div>
+    <div class="top-actions"><button class="icon-btn" onclick="goHome()">🏠</button></div>
+  </div>
+  <div class="result-card glass">
+    <h2>نتیجه نهایی</h2>
+    <div class="score-big" id="res-score">0</div>
+    <p style="color:var(--muted);margin-top:6px" id="res-name"></p>
+    <div class="radar-wrap"><canvas id="radarCanvas" width="280" height="280"></canvas></div>
+    <div class="badge-grid" id="badge-grid"></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:8px">
+      <button class="btn gold" onclick="showCertificate()">🎓 گواهینامه</button>
+      <button class="btn ghost" onclick="openMistakeClinic()">🩺 اتاق جبران خطا</button>
+      <button class="btn" onclick="goHome()">🔄 بازی مجدد</button>
+    </div>
+  </div>
+</div>
+
+</div>
+<div id="modal-root"></div>
+
+<script>
+/* ============ ELEMENTS (1-36) ============ */
+const ELEMENTS=[
+ {z:1,sym:"H",name:"هیدروژن",row:1,col:1,mass:1,group:1,period:1,cfg:"1s¹",shells:[1],cat:"g1",info:"ساده‌ترین عنصر. نافلز. یک الکترون در لایه ظرفیت."},
+ {z:2,sym:"He",name:"هلیم",row:1,col:18,mass:4,group:18,period:1,cfg:"1s²",shells:[2],cat:"g18",info:"گاز نجیب، لایه ظرفیت کامل (۲ الکترون)."},
+ {z:3,sym:"Li",name:"لیتیم",row:2,col:1,mass:7,group:1,period:2,cfg:"1s² 2s¹",shells:[2,1],cat:"g1",info:"فلز قلیایی، دوره ۲، گروه ۱."},
+ {z:4,sym:"Be",name:"بریلیم",row:2,col:2,mass:9,group:2,period:2,cfg:"1s² 2s²",shells:[2,2],cat:"g2",info:"دوره ۲، گروه ۲."},
+ {z:5,sym:"B",name:"بور",row:2,col:13,mass:11,group:13,period:2,cfg:"1s² 2s² 2p¹",shells:[2,3],cat:"g13",info:"دوره ۲، گروه ۱۳."},
+ {z:6,sym:"C",name:"کربن",row:2,col:14,mass:12,group:14,period:2,cfg:"1s² 2s² 2p²",shells:[2,4],cat:"g14",info:"دوره ۲، گروه ۱۴."},
+ {z:7,sym:"N",name:"نیتروژن",row:2,col:15,mass:14,group:15,period:2,cfg:"1s² 2s² 2p³",shells:[2,5],cat:"g15",info:"دوره ۲، گروه ۱۵."},
+ {z:8,sym:"O",name:"اکسیژن",row:2,col:16,mass:16,group:16,period:2,cfg:"1s² 2s² 2p⁴",shells:[2,6],cat:"g16",info:"دوره ۲، گروه ۱۶."},
+ {z:9,sym:"F",name:"فلوئور",row:2,col:17,mass:19,group:17,period:2,cfg:"1s² 2s² 2p⁵",shells:[2,7],cat:"g17",info:"هالوژن، دوره ۲، گروه ۱۷."},
+ {z:10,sym:"Ne",name:"نئون",row:2,col:18,mass:20,group:18,period:2,cfg:"1s² 2s² 2p⁶",shells:[2,8],cat:"g18",info:"گاز نجیب، لایه ظرفیت کامل."},
+ {z:11,sym:"Na",name:"سدیم",row:3,col:1,mass:23,group:1,period:3,cfg:"1s² 2s² 2p⁶ 3s¹",shells:[2,8,1],cat:"g1",info:"فلز قلیایی، دوره ۳، گروه ۱."},
+ {z:12,sym:"Mg",name:"منیزیم",row:3,col:2,mass:24,group:2,period:3,cfg:"1s² 2s² 2p⁶ 3s²",shells:[2,8,2],cat:"g2",info:"دوره ۳، گروه ۲."},
+ {z:13,sym:"Al",name:"آلومینیم",row:3,col:13,mass:27,group:13,period:3,cfg:"[Ne] 3s² 3p¹",shells:[2,8,3],cat:"g13",info:"دوره ۳، گروه ۱۳."},
+ {z:14,sym:"Si",name:"سیلیسیم",row:3,col:14,mass:28,group:14,period:3,cfg:"[Ne] 3s² 3p²",shells:[2,8,4],cat:"g14",info:"دوره ۳، گروه ۱۴."},
+ {z:15,sym:"P",name:"فسفر",row:3,col:15,mass:31,group:15,period:3,cfg:"[Ne] 3s² 3p³",shells:[2,8,5],cat:"g15",info:"دوره ۳، گروه ۱۵."},
+ {z:16,sym:"S",name:"گوگرد",row:3,col:16,mass:32,group:16,period:3,cfg:"[Ne] 3s² 3p⁴",shells:[2,8,6],cat:"g16",info:"دوره ۳، گروه ۱۶."},
+ {z:17,sym:"Cl",name:"کلر",row:3,col:17,mass:35.5,group:17,period:3,cfg:"[Ne] 3s² 3p⁵",shells:[2,8,7],cat:"g17",info:"هالوژن، دوره ۳، گروه ۱۷."},
+ {z:18,sym:"Ar",name:"آرگون",row:3,col:18,mass:40,group:18,period:3,cfg:"[Ne] 3s² 3p⁶",shells:[2,8,8],cat:"g18",info:"گاز نجیب، لایه ظرفیت کامل."},
+ {z:19,sym:"K",name:"پتاسیم",row:4,col:1,mass:39,group:1,period:4,cfg:"[Ar] 4s¹",shells:[2,8,8,1],cat:"g1",info:"فلز قلیایی، دوره ۴، گروه ۱."},
+ {z:20,sym:"Ca",name:"کلسیم",row:4,col:2,mass:40,group:2,period:4,cfg:"[Ar] 4s²",shells:[2,8,8,2],cat:"g2",info:"دوره ۴، گروه ۲."},
+ {z:21,sym:"Sc",name:"اسکاندیم",row:4,col:3,mass:45,group:3,period:4,cfg:"[Ar] 3d¹ 4s²",shells:[2,8,9,2],cat:"g3to12",info:"فلز واسطه، دوره ۴، گروه ۳."},
+ {z:22,sym:"Ti",name:"تیتانیم",row:4,col:4,mass:48,group:4,period:4,cfg:"[Ar] 3d² 4s²",shells:[2,8,10,2],cat:"g3to12",info:"فلز واسطه، دوره ۴، گروه ۴."},
+ {z:23,sym:"V",name:"وانادیم",row:4,col:5,mass:51,group:5,period:4,cfg:"[Ar] 3d³ 4s²",shells:[2,8,11,2],cat:"g3to12",info:"فلز واسطه، دوره ۴، گروه ۵."},
+ {z:24,sym:"Cr",name:"کروم",row:4,col:6,mass:52,group:6,period:4,cfg:"[Ar] 3d⁵ 4s¹",shells:[2,8,13,1],cat:"g3to12",info:"آرایش استثنایی برای پایداری نیمه‌پر."},
+ {z:25,sym:"Mn",name:"منگنز",row:4,col:7,mass:55,group:7,period:4,cfg:"[Ar] 3d⁵ 4s²",shells:[2,8,13,2],cat:"g3to12",info:"فلز واسطه، دوره ۴، گروه ۷."},
+ {z:26,sym:"Fe",name:"آهن",row:4,col:8,mass:56,group:8,period:4,cfg:"[Ar] 3d⁶ 4s²",shells:[2,8,14,2],cat:"g3to12",info:"فلز واسطه، دوره ۴، گروه ۸."},
+ {z:27,sym:"Co",name:"کبالت",row:4,col:9,mass:59,group:9,period:4,cfg:"[Ar] 3d⁷ 4s²",shells:[2,8,15,2],cat:"g3to12",info:"فلز واسطه، دوره ۴، گروه ۹."},
+ {z:28,sym:"Ni",name:"نیکل",row:4,col:10,mass:59,group:10,period:4,cfg:"[Ar] 3d⁸ 4s²",shells:[2,8,16,2],cat:"g3to12",info:"فلز واسطه، دوره ۴، گروه ۱۰."},
+ {z:29,sym:"Cu",name:"مس",row:4,col:11,mass:63.5,group:11,period:4,cfg:"[Ar] 3d¹⁰ 4s¹",shells:[2,8,18,1],cat:"g3to12",info:"آرایش استثنایی برای پایداری d پر."},
+ {z:30,sym:"Zn",name:"روی",row:4,col:12,mass:65,group:12,period:4,cfg:"[Ar] 3d¹⁰ 4s²",shells:[2,8,18,2],cat:"g3to12",info:"فلز واسطه، دوره ۴، گروه ۱۲."},
+ {z:31,sym:"Ga",name:"گالیم",row:4,col:13,mass:70,group:13,period:4,cfg:"[Ar] 3d¹⁰ 4s² 4p¹",shells:[2,8,18,3],cat:"g13",info:"دوره ۴، گروه ۱۳."},
+ {z:32,sym:"Ge",name:"ژرمانیم",row:4,col:14,mass:73,group:14,period:4,cfg:"[Ar] 3d¹⁰ 4s² 4p²",shells:[2,8,18,4],cat:"g14",info:"دوره ۴، گروه ۱۴."},
+ {z:33,sym:"As",name:"آرسنیک",row:4,col:15,mass:75,group:15,period:4,cfg:"[Ar] 3d¹⁰ 4s² 4p³",shells:[2,8,18,5],cat:"g15",info:"دوره ۴، گروه ۱۵."},
+ {z:34,sym:"Se",name:"سلنیم",row:4,col:16,mass:79,group:16,period:4,cfg:"[Ar] 3d¹⁰ 4s² 4p⁴",shells:[2,8,18,6],cat:"g16",info:"دوره ۴، گروه ۱۶."},
+ {z:35,sym:"Br",name:"برم",row:4,col:17,mass:80,group:17,period:4,cfg:"[Ar] 3d¹⁰ 4s² 4p⁵",shells:[2,8,18,7],cat:"g17",info:"هالوژن، دوره ۴، گروه ۱۷."},
+ {z:36,sym:"Kr",name:"کریپتون",row:4,col:18,mass:84,group:18,period:4,cfg:"[Ar] 3d¹⁰ 4s² 4p⁶",shells:[2,8,18,8],cat:"g18",info:"گاز نجیب، لایه ظرفیت کامل."}
+];
+
+const QUIZ=[
+ {id:1,topic:"دوره و گروه",q:"عنصر منیزیم (Mg) در کدام دوره و گروه جدول تناوبی قرار دارد؟",opts:["دوره ۲، گروه ۲","دوره ۳، گروه ۲","دوره ۳، گروه ۱۲","دوره ۲، گروه ۱۲"],ans:1,fb:"منیزیم با آرایش [Ne]3s² در دوره سوم و گروه دوم جدول تناوبی است.",page:11,el:12,caption:"Mg: [Ne]3s² — دوره ۳، گروه ۲"},
+ {id:2,topic:"آرایش الکترونی",q:"آرایش الکترونی کدام عنصر به‌درستی نوشته شده است؟",opts:["Na: 1s² 2s² 2p⁶ 3s¹","Mg: 1s² 2s² 2p⁶ 3s¹","Al: 1s² 2s² 2p⁶ 3s¹ 3p²","Cl: 1s² 2s² 2p⁶ 3s²"],ans:0,fb:"سدیم ۱۱ الکترون دارد: 1s² 2s² 2p⁶ 3s¹. سایر گزینه‌ها تعداد الکترون اشتباه دارند.",page:14,el:11,caption:"Na: 1s² 2s² 2p⁶ 3s¹"},
+ {id:3,topic:"لایه ظرفیت",q:"در اتم کلر (Cl) چند الکترون در لایه ظرفیت وجود دارد؟",opts:["۵","۶","۷","۸"],ans:2,fb:"کلر با آرایش [Ne]3s² 3p⁵ در لایه سوم ۷ الکترون دارد (۳s² + ۳p⁵).",page:12,el:17,caption:"Cl: [Ne]3s² 3p⁵ — ۷ الکترون ظرفیت"},
+ {id:4,topic:"دوره و گروه",q:"عنصر پتاسیم (K) در کدام گروه جدول تناوبی قرار دارد؟",opts:["گروه ۱","گروه ۲","گروه ۱۷","گروه ۱۸"],ans:0,fb:"پتاسیم با آرایش [Ar]4s¹ در گروه ۱ (فلزات قلیایی) و دوره ۴ است.",page:11,el:19,caption:"K: [Ar]4s¹ — گروه ۱"},
+ {id:5,topic:"آرایش الکترونی",q:"کدام عنصر آرایش الکترونی لایه ظرفیت 3s² 3p⁶ دارد؟",opts:["نئون","آرگون","کریپتون","کلر"],ans:1,fb:"آرگون (Ar) با آرایش [Ne]3s² 3p⁶ لایه ظرفیت کامل و ۸ الکترون در لایه سوم دارد.",page:13,el:18,caption:"Ar: [Ne]3s² 3p⁶ — گاز نجیب"},
+ {id:6,topic:"لایه ظرفیت",q:"در اتم آهن (Fe) با آرایش [Ar]3d⁶ 4s²، الکترون‌های لایه ظرفیت کدام‌اند؟",opts:["3d⁶","4s²","3d⁶ 4s²","3p⁶ 4s²"],ans:2,fb:"در عناصر واسطه، الکترون‌های لایه ظرفیت شامل الکترون‌های 4s و 3d است: 3d⁶ 4s².",page:15,el:26,caption:"Fe: [Ar]3d⁶ 4s² — لایه ظرفیت"}
+];
+
+const BADGES=[
+ {id:"explosive",em:"💥",name:"پاسخ برق‌آسا"},
+ {id:"flawless",em:"🧪",name:"شیمیدان خطاناپذیر"},
+ {id:"tablemaster",em:"🧬",name:"استاد جدول"},
+ {id:"fast",em:"⚡",name:"سریع‌ترین"},
+ {id:"perfect",em:"🏆",name:"نمره کامل"}
+];
+
+const S={
+ user:{name:"",school:""},mode:"solo",
+ idx:0,score:0,time:30,timer:null,
+ correctStreak:0,answered:false,
+ ll:{fifty:false,time:false,help:false},
+ badges:new Set(),battleTurn:"a",battleScore:{a:0,b:0},
+ topicStats:{},wrongList:[],qStartTime:0
+};
+const CFG={pass:"2026",teacher:"دکتر ساجده سیدنژاد",group:"سرگروه شیمی استان مازندران"};
+
+/* ============ LOGO UPLOAD ============ */
+function pickLogo(){
+  document.getElementById('logo-input').click();
+}
+function loadLogo(e){
+  const file=e.target.files[0];
+  if(!file)return;
+  const reader=new FileReader();
+  reader.onload=function(ev){
+    const dataUrl=ev.target.result;
+    // ذخیره در localStorage
+    try{localStorage.setItem('kimia_logo',dataUrl);}catch(err){toast("حجم تصویر زیاد است");}
+    applyLogo(dataUrl);
+    toast("✅ لوگو ذخیره شد");
+  };
+  reader.readAsDataURL(file);
+}
+function applyLogo(dataUrl){
+  const box=document.getElementById('logo-box');
+  const ph=document.getElementById('logo-placeholder');
+  const hint=document.getElementById('logo-hint');
+  // حذف تصویر قبلی اگر هست
+  const oldImg=box.querySelector('img');
+  if(oldImg)oldImg.remove();
+  // اضافه تصویر جدید
+  const img=document.createElement('img');
+  img.src=dataUrl;
+  img.alt="برمدار آموزش";
+  box.insertBefore(img,ph);
+  ph.style.display='none';
+  hint.style.display='none';
+}
+// لود لوگوی ذخیره‌شده هنگام شروع
+window.addEventListener('DOMContentLoaded',()=>{
+  try{
+    const saved=localStorage.getItem('kimia_logo');
+    if(saved)applyLogo(saved);
+  }catch(e){}
+});
+
+/* ============ PARTICLES ============ */
+const pc=document.getElementById('particles'),px=pc.getContext('2d');
+let particles=[];
+function resizeParticles(){pc.width=innerWidth;pc.height=innerHeight;}
+addEventListener('resize',resizeParticles);resizeParticles();
+for(let i=0;i<45;i++)particles.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*3+1,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,h:Math.random()*360});
+(function animParticles(){
+  px.clearRect(0,0,pc.width,pc.height);
+  particles.forEach(p=>{
+    p.x+=p.vx;p.y+=p.vy;
+    if(p.x<0||p.x>pc.width)p.vx*=-1;
+    if(p.y<0||p.y>pc.height)p.vy*=-1;
+    px.beginPath();px.arc(p.x,p.y,p.r,0,7);px.fillStyle=`hsla(${p.h},100%,60%,.5)`;px.fill();
+    p.h=(p.h+0.3)%360;
+  });
+  requestAnimationFrame(animParticles);
+})();
+
+/* ============ AUDIO ============ */
+let AC=null;
+function ac(){if(!AC)AC=new (window.AudioContext||window.webkitAudioContext)();return AC;}
+function beep(freq,dur,type,vol){
+  try{const c=ac(),o=c.createOscillator(),g=c.createGain();
+  o.type=type||'sine';o.frequency.value=freq;o.connect(g);g.connect(c.destination);
+  g.gain.setValueAtTime(vol||.15,c.currentTime);g.gain.exponentialRampToValueAtTime(.001,c.currentTime+dur);
+  o.start();o.stop(c.currentTime+dur);}catch(e){}
+}
+function sfxOK(){beep(660,.1);setTimeout(()=>beep(880,.15),100);setTimeout(()=>beep(1100,.2),200);}
+function sfxNO(){beep(200,.2,'sawtooth');setTimeout(()=>beep(150,.3,'sawtooth'),150);}
+function sfxTick(){beep(1000,.05,'square',.08);}
+function sfxWin(){[523,659,784,1046].forEach((f,i)=>setTimeout(()=>beep(f,.25),i*120));}
+
+/* ============ THEME ============ */
+const THEMES=["","fire","green","light"];
+let themeIdx=0;
+function cycleTheme(){
+  document.documentElement.removeAttribute('data-theme');
+  themeIdx=(themeIdx+1)%THEMES.length;
+  if(THEMES[themeIdx])document.documentElement.setAttribute('data-theme',THEMES[themeIdx]);
+  toast(["تم نئون","تم آتش","تم شیمی سبز","تم روشن"][themeIdx]);
+}
+
+/* ============ TOAST ============ */
+function toast(msg,ms){
+  ms=ms||2200;
+  const t=document.createElement('div');t.className='toast';t.textContent=msg;
+  document.body.appendChild(t);setTimeout(()=>t.remove(),ms);
+}
+
+/* ============ MODAL ============ */
+function modal(html,wide){
+  const root=document.getElementById('modal-root');
+  root.innerHTML=`<div class="modal-bg" onclick="if(event.target===this)closeModal()"><div class="modal glass" ${wide?'style="max-width:820px"':''}>
+  <button class="close-x" onclick="closeModal()">✕</button>${html}</div></div>`;
+}
+function closeModal(){document.getElementById('modal-root').innerHTML='';}
+
+/* ============ LOGIN ============ */
+function setMode(el,m){
+  document.querySelectorAll('.mode-card').forEach(c=>c.classList.remove('active'));
+  el.classList.add('active');S.mode=m;
+}
+function startGame(){
+  const n=document.getElementById('in-name').value.trim();
+  const s=document.getElementById('in-school').value.trim();
+  if(!n||!s){toast("لطفاً نام و مدرسه را وارد کن");return;}
+  S.user={name:n,school:s};
+  S.idx=0;S.score=0;S.correctStreak=0;S.answered=false;
+  S.badges=new Set();S.wrongList=[];S.topicStats={};
+  S.battleScore={a:0,b:0};S.battleTurn="a";
+  S.ll={fifty:false,time:false,help:false};
+  document.getElementById('screen-login').classList.add('hidden');
+  document.getElementById('screen-result').classList.add('hidden');
+  document.getElementById('screen-game').classList.remove('hidden');
+  document.getElementById('hud-opp').textContent=S.mode==='battle'?'فعال':'—';
+  if(S.mode==='battle'){
+    document.getElementById('battle-view').classList.remove('hidden');
+    document.getElementById('solo-view').classList.add('hidden');
+  }else{
+    document.getElementById('battle-view').classList.add('hidden');
+    document.getElementById('solo-view').classList.remove('hidden');
+  }
+  loadQuestion();
+}
+
+/* ============ QUIZ ============ */
+function loadQuestion(){
+  const q=QUIZ[S.idx];
+  S.answered=false;
+  document.getElementById('hud-q').textContent=(S.idx+1)+'/'+QUIZ.length;
+  document.getElementById('hud-score').textContent=S.score;
+  document.getElementById('q-topic').textContent=q.topic;
+  document.getElementById('progress-dots').innerHTML=QUIZ.map((_,i)=>`<i class="${i<S.idx?'done':i===S.idx?'cur':''}"></i>`).join('');
+
+  if(S.mode==='battle'){
+    document.getElementById('b-text').textContent=q.q;
+    renderBattleOpts(q);
+    S.battleTurn='a';updateBattleSides();
+    document.getElementById('b-feedback').className='feedback';
+    startTimer();
+    return;
+  }
+
+  document.getElementById('q-text').textContent=q.q;
+  document.getElementById('q-image').innerHTML=q.caption||'';
+  const opts=document.getElementById('options');
+  opts.innerHTML='';
+  q.opts.forEach((o,i)=>{
+    const d=document.createElement('div');
+    d.className='opt';d.dataset.i=i;
+    d.innerHTML=`<span class="key">${['الف','ب','ج','د'][i]}</span><span>${o}</span>`;
+    d.onclick=()=>answer(i);
+    opts.appendChild(d);
+  });
+  document.getElementById('feedback').className='feedback';
+  document.getElementById('ll-50').classList.toggle('used',S.ll.fifty);
+  document.getElementById('ll-time').classList.toggle('used',S.ll.time);
+  document.getElementById('ll-help').classList.toggle('used',S.ll.help);
+  document.getElementById('audio-pod').classList.remove('playing');
+  S.qStartTime=Date.now();
+  drawAtom(q.el);
+  startTimer();
+}
+
+function startTimer(){
+  clearInterval(S.timer);
+  S.time=30;updateTimerUI();
+  S.timer=setInterval(()=>{
+    S.time--;updateTimerUI();
+    if(S.time<=5&&S.time>0)sfxTick();
+    if(S.time<=0){clearInterval(S.timer);timeUp();}
+  },1000);
+}
+function updateTimerUI(){
+  document.getElementById('hud-time').textContent=Math.max(0,S.time);
+  document.getElementById('timer-fill').style.width=Math.max(0,(S.time/30)*100)+'%';
+}
+function timeUp(){
+  if(S.answered)return;
+  if(S.mode==='battle'){battleAnswer(-1,S.battleTurn);return;}
+  S.answered=true;
+  revealAnswer(-1);
+  S.correctStreak=0;
+  S.wrongList.push(S.idx);
+  const q=QUIZ[S.idx];
+  if(!S.topicStats[q.topic])S.topicStats[q.topic]={c:0,t:0};
+  S.topicStats[q.topic].t++;
+  setTimeout(nextQuestion,2200);
+}
+
+function answer(i){
+  if(S.answered)return;
+  S.answered=true;
+  clearInterval(S.timer);
+  const q=QUIZ[S.idx];
+  const elapsed=(Date.now()-S.qStartTime)/1000;
+  const correct=(i===q.ans);
+  revealAnswer(i);
+  if(correct){
+    S.score+=100+Math.max(0,Math.floor(S.time*2));
+    S.correctStreak++;
+    sfxOK();
+    if(elapsed<5&&!S.badges.has('explosive')){S.badges.add('explosive');toast("💥 نشان پاسخ برق‌آسا!");}
+    if(S.correctStreak>=3&&!S.badges.has('flawless')){S.badges.add('flawless');toast("🧪 نشان شیمیدان خطاناپذیر!");}
+  }else{
+    S.correctStreak=0;sfxNO();
+    S.wrongList.push(S.idx);
+  }
+  if(!S.topicStats[q.topic])S.topicStats[q.topic]={c:0,t:0};
+  S.topicStats[q.topic].t++;
+  if(correct)S.topicStats[q.topic].c++;
+  document.getElementById('hud-score').textContent=S.score;
+  setTimeout(nextQuestion,2200);
+}
+
+function revealAnswer(sel){
+  const q=QUIZ[S.idx];
+  document.querySelectorAll('.opt').forEach(el=>{
+    el.classList.add('disabled');
+    const i=+el.dataset.i;
+    if(i===q.ans)el.classList.add('correct');
+    if(i===sel&&i!==q.ans)el.classList.add('wrong');
+  });
+  const fb=document.getElementById('feedback');
+  const ok=sel===q.ans;
+  fb.className='feedback show '+(ok?'ok':'no');
+  fb.innerHTML=`<b>${ok?'✅ آفرین!':'❌ پاسخ صحیح: '+q.opts[q.ans]}</b><br>${q.fb}<br><small style="color:var(--muted)">📖 صفحه ${q.page} کتاب شیمی</small>`;
+}
+
+function nextQuestion(){
+  S.idx++;
+  if(S.idx>=QUIZ.length){
+    clearInterval(S.timer);
+    if(S.mode==='battle'){showBattleResult();return;}
+    endGame();
+    return;
+  }
+  loadQuestion();
+}
+
+/* ============ BATTLE ============ */
+function renderBattleOpts(q){
+  ['a','b'].forEach(k=>{
+    const box=document.getElementById('b-opts-'+k);
+    box.innerHTML='';
+    q.opts.forEach((o,i)=>{
+      const b=document.createElement('button');
+      b.textContent=`${['الف','ب','ج','د'][i]}) ${o}`;
+      b.onclick=()=>battleAnswer(i,k);
+      box.appendChild(b);
+    });
+  });
+}
+function updateBattleSides(){
+  document.getElementById('side-a').classList.toggle('active',S.battleTurn==='a');
+  document.getElementById('side-b').classList.toggle('active',S.battleTurn==='b');
+}
+function battleAnswer(i,who){
+  if(who!==S.battleTurn)return;
+  const q=QUIZ[S.idx];
+  const ok=(i===q.ans);
+  if(ok){S.battleScore[who]+=100;sfxOK();}else{sfxNO();}
+  document.getElementById('hud-score').textContent=`A:${S.battleScore.a} | B:${S.battleScore.b}`;
+  const fb=document.getElementById('b-feedback');
+  fb.className='feedback show '+(ok?'ok':'no');
+  fb.innerHTML=`<b>${who==='a'?'🅰️ الف':'🅱️ ب'} ${ok?'درست!':'غلط'} — پاسخ: ${q.opts[q.ans]}</b><br>${q.fb}`;
+  if(S.battleTurn==='a'){S.battleTurn='b';updateBattleSides();}
+  else{setTimeout(()=>{clearInterval(S.timer);nextQuestion();},1600);}
+}
+function showBattleResult(){
+  document.getElementById('screen-game').classList.add('hidden');
+  document.getElementById('screen-result').classList.remove('hidden');
+  const a=S.battleScore.a,b=S.battleScore.b;
+  document.getElementById('res-score').textContent=`🅰️ ${a} — 🅱️ ${b}`;
+  document.getElementById('res-name').textContent=a===b?'مساوی!':(a>b?'🅰️ الف برنده شد!':'🅱️ ب برنده شد!');
+  document.getElementById('badge-grid').innerHTML='';
+  document.getElementById('radarCanvas').style.display='none';
+  sfxWin();
+}
+
+/* ============ END GAME ============ */
+function endGame(){
+  document.getElementById('screen-game').classList.add('hidden');
+  document.getElementById('screen-result').classList.remove('hidden');
+  document.getElementById('res-score').textContent=S.score;
+  document.getElementById('res-name').textContent=`${S.user.name} — ${S.user.school}`;
+  if(S.score>=QUIZ.length*100)S.badges.add('perfect');
+  const bg=document.getElementById('badge-grid');
+  bg.innerHTML=BADGES.map(b=>`<div class="badge ${S.badges.has(b.id)?'earned':''}"><span class="em">${b.em}</span>${b.name}</div>`).join('');
+  drawRadar();
+  sfxWin();
+  saveResult();
+}
+function saveResult(){
+  try{
+    const arr=JSON.parse(localStorage.getItem('kimia_results')||'[]');
+    arr.push({name:S.user.name,school:S.user.school,score:S.score,date:new Date().toLocaleString('fa-IR'),mode:S.mode});
+    localStorage.setItem('kimia_results',JSON.stringify(arr));
+  }catch(e){}
+}
+
+/* ============ RADAR ============ */
+function drawRadar(){
+  const c=document.getElementById('radarCanvas'),ctx=c.getContext('2d');
+  c.style.display='block';
+  ctx.clearRect(0,0,c.width,c.height);
+  const cx=c.width/2,cy=c.height/2,R=100;
+  const topics=Object.keys(S.topicStats);
+  if(!topics.length)return;
+  const n=topics.length;
+  for(let r=1;r<=4;r++){
+    ctx.beginPath();
+    for(let i=0;i<=n;i++){
+      const ang=(i/n)*2*Math.PI-Math.PI/2;
+      const x=cx+Math.cos(ang)*R*r/4;
+      const y=cy+Math.sin(ang)*R*r/4;
+      i?ctx.lineTo(x,y):ctx.moveTo(x,y);
+    }
+    ctx.strokeStyle='rgba(0,240,255,0.25)';ctx.stroke();
+  }
+  ctx.beginPath();
+  topics.forEach((t,i)=>{
+    const ang=(i/n)*2*Math.PI-Math.PI/2;
+    const pct=S.topicStats[t].c/S.topicStats[t].t;
+    const x=cx+Math.cos(ang)*R*pct,y=cy+Math.sin(ang)*R*pct;
+    i?ctx.lineTo(x,y):ctx.moveTo(x,y);
+  });
+  ctx.closePath();
+  ctx.fillStyle='rgba(0,240,255,0.35)';ctx.fill();
+  ctx.strokeStyle='#00f0ff';ctx.lineWidth=2;ctx.stroke();
+  ctx.fillStyle='#e8f4ff';ctx.font='bold 10px Tahoma';ctx.textAlign='center';
+  topics.forEach((t,i)=>{
+    const ang=(i/n)*2*Math.PI-Math.PI/2;
+    const x=cx+Math.cos(ang)*(R+22),y=cy+Math.sin(ang)*(R+22);
+    ctx.fillText(t,x,y+3);
+  });
+}
+
+/* ============ LIFELINES ============ */
+function useFifty(){
+  if(S.ll.fifty||S.answered)return;
+  S.ll.fifty=true;document.getElementById('ll-50').classList.add('used');
+  const q=QUIZ[S.idx];
+  const wrongs=[0,1,2,3].filter(i=>i!==q.ans);
+  wrongs.sort(()=>Math.random()-.5);
+  wrongs.slice(0,2).forEach(i=>{
+    const el=document.querySelector(`.opt[data-i="${i}"]`);
+    if(el)el.classList.add('eliminated');
+  });
+  toast("✂️ دو گزینه حذف شد");
+}
+function useTime(){
+  if(S.ll.time||S.answered)return;
+  S.ll.time=true;document.getElementById('ll-time').classList.add('used');
+  S.time+=15;updateTimerUI();toast("⏱️ +۱۵ ثانیه");
+}
+function useHelp(){
+  if(S.ll.help||S.answered)return;
+  S.ll.help=true;document.getElementById('ll-help').classList.add('used');
+  const q=QUIZ[S.idx];
+  toast(`🧑‍🔬 راهنما: ${q.fb.split('.')[0]}`,4000);
+}
+
+/* ============ ATOM DRAW ============ */
+let atomAnimId=null;
+function drawAtom(z){
+  const c=document.getElementById('reactionCanvas'),ctx=c.getContext('2d');
+  if(atomAnimId)cancelAnimationFrame(atomAnimId);
+  const el=ELEMENTS.find(e=>e.z===z);
+  if(!el)return;
+  document.getElementById('reaction-caption').textContent=`${el.name} (${el.sym}) — دوره ${el.period}، گروه ${el.group} | ${el.cfg}`;
+  let t=0;
+  function frame(){
+    ctx.clearRect(0,0,c.width,c.height);
+    const cx=c.width/2,cy=c.height/2;
+    ctx.fillStyle='#00f0ff';ctx.shadowColor='#00f0ff';ctx.shadowBlur=15;
+    ctx.beginPath();ctx.arc(cx,cy,8,0,7);ctx.fill();ctx.shadowBlur=0;
+    ctx.fillStyle='#001';ctx.font='bold 9px Arial';ctx.textAlign='center';
+    ctx.fillText(el.sym,cx,cy+3);
+    const colors=['#ff6a00','#00ff88','#00f0ff','#ff00e5'];
+    el.shells.forEach((count,si)=>{
+      const r=28+si*24;
+      ctx.strokeStyle='rgba(255,255,255,0.15)';ctx.beginPath();ctx.arc(cx,cy,r,0,7);ctx.stroke();
+      for(let i=0;i<count;i++){
+        const ang=(i/count)*2*Math.PI+t*(0.02+si*0.005);
+        const x=cx+Math.cos(ang)*r,y=cy+Math.sin(ang)*r;
+        ctx.fillStyle=colors[si%colors.length];
+        ctx.beginPath();ctx.arc(x,y,3.5,0,7);ctx.fill();
+      }
+    });
+    ctx.fillStyle='#ffd700';ctx.font='bold 12px Vazirmatn,Tahoma';ctx.textAlign='center';
+    ctx.fillText(`${el.name} | Z=${el.z} | دوره ${el.period} | گروه ${el.group}`,cx,c.height-8);
+    t++;atomAnimId=requestAnimationFrame(frame);
+  }
+  frame();
+}
+
+/* ============ TEXTBOOK ============ */
+function openTextbook(){
+  const q=QUIZ[S.idx];
+  modal(`<h2>📖 صفحه ${q.page} کتاب شیمی</h2>
+    <p style="line-height:1.9;font-size:14px">${q.fb}</p>
+    <div style="margin-top:14px;padding:12px;background:rgba(0,240,255,.1);border-radius:12px">
+      <b style="color:var(--neon)">توضیح تکمیلی:</b>
+      <p style="font-size:13px;margin-top:6px;line-height:1.8">${(ELEMENTS.find(e=>e.z===q.el)||{}).info||''}</p>
+    </div>`);
+}
+
+/* ============ PERIODIC TABLE ============ */
+function openPeriodic(){
+  let html=`<h2 style="direction:rtl">🧬 جدول تناوبی — ۳۶ عنصر اول (از چپ به راست)</h2>
+  <div class="ptable-wrap"><div class="periodic">`;
+  const grid={};
+  ELEMENTS.forEach(e=>{grid[e.row+'-'+e.col]=e;});
+  for(let r=1;r<=4;r++){
+    for(let c=1;c<=18;c++){
+      const e=grid[r+'-'+c];
+      if(e){
+        html+=`<div class="el ${e.cat}" onclick="showElInfo(${e.z})" title="${e.name}"><span class="num">${e.z}</span><span class="sym">${e.sym}</span><span class="nm">${e.name}</span></div>`;
+      }else{
+        html+=`<div class="el empty"></div>`;
+      }
+    }
+  }
+  html+=`</div></div>
+  <div class="legend">
+    <span style="background:rgba(255,100,100,.7)">گروه ۱ (قلیایی)</span>
+    <span style="background:rgba(255,160,80,.7)">گروه ۲</span>
+    <span style="background:rgba(160,150,255,.7)">گروه‌های ۳-۱۲</span>
+    <span style="background:rgba(120,200,255,.7)">گروه ۱۳</span>
+    <span style="background:rgba(150,220,180,.7)">گروه ۱۴</span>
+    <span style="background:rgba(140,255,150,.7)">گروه ۱۵</span>
+    <span style="background:rgba(200,255,120,.7)">گروه ۱۶</span>
+    <span style="background:rgba(80,220,255,.7)">گروه ۱۷ (هالوژن)</span>
+    <span style="background:rgba(255,215,0,.7)">گروه ۱۸ (نجیب)</span>
+  </div>
+  <div id="el-info" class="el-info"></div>
+  <p class="help-text" style="direction:rtl">👆 روی هر عنصر کلیک کن • جهت جدول از چپ به راست مثل جدول مندلیف</p>`;
+  modal(html,true);
+}
+function showElInfo(z){
+  const e=ELEMENTS.find(x=>x.z===z);if(!e)return;
+  const box=document.getElementById('el-info');
+  if(!box)return;
+  box.classList.add('show');
+  box.innerHTML=`<h3>${e.name} (${e.sym}) — Z=${e.z}</h3>
+    <p><b>دوره:</b> ${e.period} | <b>گروه:</b> ${e.group}</p>
+    <p><b>جرم اتمی:</b> ${e.mass}</p>
+    <p><b>آرایش الکترونی:</b> ${e.cfg}</p>
+    <p><b>الکترون‌های لایه‌ها:</b> ${e.shells.join(' , ')}</p>
+    <p><b>الکترون‌های لایه ظرفیت:</b> ${e.shells[e.shells.length-1]}</p>
+    <p style="margin-top:8px;color:var(--muted)">${e.info}</p>
+    <button class="btn sm ghost" style="margin-top:10px" onclick="speakElement('${e.name}','${e.sym}',${e.period},${e.group})">🔊 تلفظ فارسی</button>`;
+}
+
+/* ============ TOOLBOX ============ */
+function openToolbox(){
+  modal(`<h2>🧰 جعبه ابزار</h2>
+    <div class="tool-tabs">
+      <button class="active" onclick="switchTool(this,'tool-periodic')">🧬 جدول</button>
+      <button onclick="switchTool(this,'tool-calc')">🧮 ماشین‌حساب</button>
+      <button onclick="switchTool(this,'tool-formulas')">📜 فرمول‌ها</button>
+    </div>
+    <div id="tool-periodic" class="tool-panel">
+      <p style="font-size:13px;line-height:1.8">جدول تناوبی ۳۶ عنصر اول را باز کن و روی هر عنصر کلیک کن.</p>
+      <button class="btn" style="margin-top:10px" onclick="closeModal();openPeriodic()">باز کردن جدول</button>
+    </div>
+    <div id="tool-calc" class="tool-panel hidden">
+      <div class="calc-display" id="calc-disp">0</div>
+      <div class="calc-grid">
+        ${['7','8','9','÷','4','5','6','×','1','2','3','-','0','.','=','+'].map(k=>`<button class="${'÷×-+='.includes(k)?(k==='='?'eq':'op'):''}" onclick="calcPress('${k}')">${k}</button>`).join('')}
+        <button style="grid-column:span 4;background:rgba(255,51,102,.2);color:var(--red)" onclick="calcClear()">C</button>
+      </div>
+    </div>
+    <div id="tool-formulas" class="tool-panel hidden">
+      <div class="formula-list">
+        <div><b>شماره دوره:</b> بزرگ‌ترین عدد n در آرایش الکترونی</div>
+        <div><b>شماره گروه:</b> تعداد الکترون‌های لایه ظرفیت (برای عناصر اصلی)</div>
+        <div><b>گروه ۱ و ۲:</b> فلزات قلیایی و قلیایی خاکی</div>
+        <div><b>گروه ۱۷:</b> هالوژن‌ها</div>
+        <div><b>گروه ۱۸:</b> گازهای نجیب</div>
+        <div><b>ترتیب پر شدن:</b> 1s 2s 2p 3s 3p 4s 3d 4p</div>
+        <div><b>ظرفیت لایه s:</b> ۲ | <b>p:</b> ۶ | <b>d:</b> ۱۰</div>
+      </div>
+    </div>`);
+}
+function switchTool(btn,id){
+  document.querySelectorAll('.tool-tabs button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.tool-panel').forEach(p=>p.classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
+}
+
+/* ============ CALC ============ */
+let calcExp='0';
+function calcPress(k){
+  if(k==='C'){calcExp='0';}
+  else if(k==='='){
+    try{calcExp=String(eval(calcExp.replace(/÷/g,'/').replace(/×/g,'*')));}catch(e){calcExp='خطا';}
+  }else{
+    if(calcExp==='0'||calcExp==='خطا')calcExp=k==='.'?'0.':k;
+    else calcExp+=k;
+  }
+  const d=document.getElementById('calc-disp');if(d)d.textContent=calcExp;
+}
+function calcClear(){calcExp='0';const d=document.getElementById('calc-disp');if(d)d.textContent='0';}
+
+/* ============ READ ALOUD ============ */
+function toPersianNumber(num){
+  const persianDigits=['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+  return String(num).split('').map(d=>/\d/.test(d)?persianDigits[+d]:d).join('');
+}
+function getPersianVoice(){
+  if(!('speechSynthesis' in window))return null;
+  const voices=speechSynthesis.getVoices();
+  return voices.find(v=>v.lang==='fa-IR')||
+         voices.find(v=>v.lang==='fa')||
+         voices.find(v=>v.lang&&v.lang.startsWith('fa'))||
+         null;
+}
+let voicesLoaded=false;
+if('speechSynthesis' in window){
+  speechSynthesis.onvoiceschanged=()=>{voicesLoaded=true;};
+  speechSynthesis.getVoices();
+  setTimeout(()=>{voicesLoaded=true;},500);
+}
+function speakText(text){
+  if(!('speechSynthesis' in window)){toast("مرورگر از خواندن صوتی پشتیبانی نمی‌کند");return false;}
+  const utter=new SpeechSynthesisUtterance(text);
+  utter.lang='fa-IR';
+  const voice=getPersianVoice();
+  if(voice){utter.voice=voice;utter.lang=voice.lang;}
+  utter.rate=0.85;
+  utter.pitch=1;
+  utter.volume=1;
+  speechSynthesis.cancel();
+  speechSynthesis.speak(utter);
+  return true;
+}
+function toggleReadAloud(){
+  const pod=document.getElementById('audio-pod');
+  const q=QUIZ[S.idx];
+  const fullText=`سوال ${toPersianNumber(S.idx+1)}. ${q.q} گزینه‌ها: ${q.opts.map((o,i)=>`${['الف','ب','ج','د'][i]}، ${o}`).join('، ')}`;
+  pod.classList.add('playing');
+  const utter=new SpeechSynthesisUtterance(fullText);
+  utter.lang='fa-IR';
+  const voice=getPersianVoice();
+  if(voice){utter.voice=voice;utter.lang=voice.lang;}
+  utter.rate=0.85;
+  utter.onend=()=>pod.classList.remove('playing');
+  utter.onerror=()=>pod.classList.remove('playing');
+  speechSynthesis.cancel();
+  speechSynthesis.speak(utter);
+  if(!getPersianVoice())toast("⚠️ صدای فارسی در مرورگر یافت نشد، اما تلاش می‌شود",3500);
+}
+function speakElement(name,sym,period,group){
+  const text=`عنصر ${name}، نماد ${sym}، در دوره ${toPersianNumber(period)} و گروه ${toPersianNumber(group)} جدول تناوبی قرار دارد`;
+  speakText(text);
+}
+
+/* ============ CERTIFICATE ============ */
+function showCertificate(){
+  modal(`<h2>🎓 گواهینامه</h2>
+    <canvas id="certCanvas" width="900" height="620"></canvas>
+    <div style="margin-top:12px;text-align:center">
+      <button class="btn gold" onclick="downloadCert()">⬇️ دانلود (PNG)</button>
+    </div>`,true);
+  setTimeout(drawCert,50);
+}
+function drawCert(){
+  const c=document.getElementById('certCanvas');if(!c)return;
+  const ctx=c.getContext('2d');
+  const g=ctx.createLinearGradient(0,0,900,620);
+  g.addColorStop(0,'#0a0e27');g.addColorStop(1,'#1a1f4e');
+  ctx.fillStyle=g;ctx.fillRect(0,0,900,620);
+  ctx.strokeStyle='#ffd700';ctx.lineWidth=8;ctx.strokeRect(20,20,860,580);
+  ctx.strokeStyle='#00f0ff';ctx.lineWidth=2;ctx.strokeRect(38,38,824,544);
+  ctx.fillStyle='#ffd700';ctx.font='bold 38px Tahoma';ctx.textAlign='center';
+  ctx.fillText('🏆 گواهینامه کیمیاگر فردا 🏆',450,120);
+  ctx.fillStyle='#00f0ff';ctx.font='bold 26px Tahoma';
+  ctx.fillText('جدول تناوبی و آرایش الکترونی',450,175);
+  ctx.fillStyle='#e8f4ff';ctx.font='20px Tahoma';
+  ctx.fillText('این گواهینامه به افتخار',450,240);
+  ctx.fillStyle='#ffd700';ctx.font='bold 34px Tahoma';
+  ctx.fillText(S.user.name||'دانش‌آموز',450,290);
+  ctx.fillStyle='#e8f4ff';ctx.font='18px Tahoma';
+  ctx.fillText(`از مدرسه: ${S.user.school||''}`,450,330);
+  ctx.fillText(`به دلیل کسب امتیاز ${S.score} در مسابقه شیمی`,450,375);
+  ctx.fillStyle='#00ff88';ctx.font='bold 22px Tahoma';
+  ctx.fillText(`تاریخ: ${new Date().toLocaleDateString('fa-IR')}`,450,430);
+  ctx.fillStyle='#00f0ff';ctx.font='italic 20px Tahoma';
+  ctx.fillText('دکتر ساجده سیدنژاد',450,510);
+  ctx.fillStyle='#9bb0d0';ctx.font='14px Tahoma';
+  ctx.fillText('سرگروه شیمی استان مازندران',450,540);
+}
+function downloadCert(){
+  const c=document.getElementById('certCanvas');
+  const a=document.createElement('a');
+  a.download=`گواهینامه-${S.user.name}.png`;
+  a.href=c.toDataURL('image/png');a.click();
+}
+
+/* ============ MISTAKE CLINIC ============ */
+function openMistakeClinic(){
+  if(!S.wrongList.length){
+    modal(`<h2>🩺 اتاق جبران خطا</h2><p>🎉 هیچ سوال غلطی نداشتی!</p>`);return;
+  }
+  let html=`<h2>🩺 اتاق جبران خطا</h2><p style="font-size:13px;color:var(--muted)">مرور سوالات اشتباه:</p><div style="margin-top:12px">`;
+  S.wrongList.forEach(idx=>{
+    const q=QUIZ[idx];
+    html+=`<div style="padding:14px;border-radius:12px;background:rgba(0,240,255,.08);margin-bottom:10px">
+      <b style="color:var(--neon)">📌 ${q.topic}</b>
+      <p style="margin:6px 0;font-size:13px">${q.q}</p>
+      <p style="color:var(--green);font-size:13px">✅ پاسخ: ${q.opts[q.ans]}</p>
+      <p style="font-size:12px;color:var(--muted);margin-top:4px">${q.fb}</p>
+    </div>`;
+  });
+  html+='</div>';
+  modal(html,true);
+}
+
+/* ============ TEACHER PANEL ============ */
+function openTeacher(){
+  modal(`<h2>🔐 ورود به پنل معلم</h2>
+    <div class="field"><label>رمز عبور</label><input type="password" id="t-pass" placeholder="رمز را وارد کنید" onkeydown="if(event.key==='Enter')checkTeacher()"></div>
+    <button class="btn" style="width:100%" onclick="checkTeacher()">ورود</button>
+    <p class="help-text">💡 رمز پیش‌فرض: 2026</p>`);
+  setTimeout(()=>{const el=document.getElementById('t-pass');if(el)el.focus();},100);
+}
+function checkTeacher(){
+  const inp=document.getElementById('t-pass');
+  if(!inp)return;
+  if(inp.value===CFG.pass){showTeacherPanel();}
+  else toast("❌ رمز اشتباه است");
+}
+function showTeacherPanel(){
+  const arr=JSON.parse(localStorage.getItem('kimia_results')||'[]');
+  let html=`<h2>📊 پنل معلم — ${CFG.teacher}</h2>
+    <p style="font-size:12px;color:var(--muted)">مجموع نتایج: ${arr.length}</p>`;
+  if(arr.length){
+    html+=`<div style="max-height:320px;overflow-y:auto"><table class="t-table">
+      <tr><th>نام</th><th>مدرسه</th><th>امتیاز</th><th>تاریخ</th><th>حالت</th></tr>`;
+    arr.forEach(r=>{
+      html+=`<tr><td>${r.name}</td><td>${r.school}</td><td><b style="color:var(--neon)">${r.score}</b></td><td>${r.date}</td><td>${r.mode}</td></tr>`;
+    });
+    html+=`</table></div>
+      <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn gold" onclick="downloadCSV()">⬇️ دانلود CSV</button>
+        <button class="btn ghost" onclick="clearResults()">🗑️ پاک کردن نتایج</button>
+      </div>`;
+  }else{
+    html+=`<p style="margin-top:12px">هنوز نتیجه‌ای ثبت نشده است.</p>`;
+  }
+  modal(html,true);
+}
+function downloadCSV(){
+  const arr=JSON.parse(localStorage.getItem('kimia_results')||'[]');
+  if(!arr.length){toast("نتیجه‌ای نیست");return;}
+  let csv='\uFEFFنام,مدرسه,امتیاز,تاریخ,حالت\n';
+  arr.forEach(r=>csv+=`${r.name},${r.school},${r.score},${r.date},${r.mode}\n`);
+  const blob=new Blob([csv],{type:'text/csv;charset=utf-8'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);a.download='نتایج-کیمیاگران.csv';a.click();
+}
+function clearResults(){
+  if(confirm('همه نتایج پاک شوند؟')){
+    localStorage.removeItem('kimia_results');
+    showTeacherPanel();toast("نتایج پاک شد");
+  }
+}
+
+/* ============ EMERGENCY EXIT ============ */
+function emergencyExit(){
+  modal(`<h2>🚪 خروج اضطراری</h2>
+    <p style="font-size:13px;margin-bottom:14px">آیا می‌خواهی امتیاز فعلی ثبت شود یا کامل انصراف دهی؟</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn" onclick="exitWithSave()">💾 ثبت امتیاز و خروج</button>
+      <button class="btn ghost" onclick="exitNoSave()">❌ انصراف کامل</button>
+    </div>`);
+}
+function exitWithSave(){
+  saveResult();
+  closeModal();goHome();toast("امتیاز ذخیره شد");
+}
+function exitNoSave(){closeModal();goHome();}
+
+/* ============ GO HOME ============ */
+function goHome(){
+  clearInterval(S.timer);
+  if(atomAnimId){cancelAnimationFrame(atomAnimId);atomAnimId=null;}
+  document.getElementById('screen-game').classList.add('hidden');
+  document.getElementById('screen-result').classList.add('hidden');
+  document.getElementById('screen-login').classList.remove('hidden');
+  S.ll={fifty:false,time:false,help:false};
+  S.idx=0;S.score=0;S.answered=false;
+}
+
+/* ============ VOICES PRELOAD ============ */
+if('speechSynthesis' in window){
+  speechSynthesis.getVoices();
+  document.addEventListener('click',function initVoices(){
+    speechSynthesis.getVoices();
+  },{once:true});
+}
+</script>
+</body>
+</html>
